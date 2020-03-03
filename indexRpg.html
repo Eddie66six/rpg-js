@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="rpg.js"></script>
+    <script>
+        window.onbeforeunload = function (event) {
+            console.log('onbeforeunload');
+            var message = 'Important: Please click on \'Save\' button to leave this page.';
+            if (typeof event == 'undefined') {
+                event = window.event;
+            }
+            if (event) {
+                event.returnValue = message;
+            }
+            console.log(event);
+            return message;
+        };
+        // console.log('GORDO');
+        // console.log(new Jogador('Eddie', Tipo.GORDO, Profissao.TI));
+        // console.log(new Jogador('Eddie', Tipo.GORDO, Profissao.PEDREIRO));
+        // console.log(new Jogador('Eddie', Tipo.GORDO, Profissao.MOTOBOY));
+
+        // console.log('MAGRO');
+        // console.log(new Jogador('Eddie', Tipo.MAGRO, Profissao.TI));
+        // console.log(new Jogador('Eddie', Tipo.MAGRO, Profissao.PEDREIRO));
+        // console.log(new Jogador('Eddie', Tipo.MAGRO, Profissao.MOTOBOY));
+
+        // console.log('FEIO');
+        // console.log(new Jogador('Eddie', Tipo.FEIO, Profissao.TI));
+        // console.log(new Jogador('Eddie', Tipo.FEIO, Profissao.PEDREIRO));
+        // console.log(new Jogador('Eddie', Tipo.FEIO, Profissao.MOTOBOY));
+    </script>
+</body>
+</html>
